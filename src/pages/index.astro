@@ -2,7 +2,7 @@
 import Films from "@components/Films.astro";
 import Footer from "@components/Footer.astro";
 import Friends from "@components/Friends.astro";
-import Tracks from "@components/Tracks.astro";
+import Tracks from "@components/Tracks.svelte";
 import Layout from "@layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -34,7 +34,7 @@ import Layout from "@layouts/Layout.astro";
     <h2>Recent Films</h2>
     <Films />
     <h2>Recent Tracks</h2>
-    <Tracks />
+    <Tracks client:load />
     <h2>Friends</h2>
     <Friends />
 

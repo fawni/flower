@@ -1,12 +1,15 @@
----
-const { name, artist, url, cover_url } = Astro.props;
----
+<script>
+export let name;
+export let artist;
+export let url;
+export let cover_url;
+</script>
 
 <span class="track">
-  <a href=`${url}`>
-    <img class="cover" src=`${cover_url}` width="150" height="150" />
+  <a href={url}>
+    <img class="cover" src={cover_url} width="150" height="150" />
   </a>
-  <a href=`${url}`><p class="track-name">{name}</p></a>
+  <a href={url}><p class="track-name">{name}</p></a>
   <p class="track-artist">{artist}</p>
 </span>
 
