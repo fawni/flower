@@ -1,0 +1,67 @@
+---
+import sanitizeHtml from "sanitize-html";
+const { name, year, rating, poster_url } = Astro.props;
+
+const stars = {
+  "1.0": "★",
+  "1.5": "★½",
+  "2.0": "★★",
+  "2.5": "★★½",
+  "3.0": "★★★",
+  "3.5": "★★★½",
+  "4.0": "★★★★",
+  "4.5": "★★★★½",
+  "5.0": "★★★★★",
+};
+---
+
+<span class="film">
+  <a href="">
+    <img class="poster" src=`${poster_url}` width="150" height="225">
+  </a>
+  <a><p class="film-name">{sanitizeHtml(name)}</p></a>
+  <p class="film-year">{year}</p>
+  <p class="film-rating">{stars[rating]}</p>
+</span>
+
+<style lang="scss">
+.film {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+  text-align: center;
+  align-items: center;
+}
+
+.film-name {
+  padding-top: 0.5rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.film-year {
+  color: var(--site-secondary-text-color);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.poster {
+  border-radius: 8px;
+}
+
+a {
+  color: var(--site-primary-text-color);
+  text-decoration: none;
+  cursor: pointer;
+
+  transition-property: opacity, text-decoration;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+
+  &:hover, &:focus {
+    color: var(--site-primary-text-color);
+    opacity: 0.5;
+  }
+}
+</style>

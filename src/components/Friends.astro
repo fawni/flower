@@ -1,0 +1,45 @@
+---
+const friends = [
+  ["rosie", "https://github.com/zaysei", "https://github.com/zaysei.png"],
+  ["rushii", "https://rushii.dev/", "https://github.com/rushiiMachine.png"],
+  ["samantha", "https://github.com/Wraami", "https://github.com/Wraami.png"],
+  ["samara", "https://khcrysalis.dev/", "https://github.com/khcrysalis.png"],
+  ["vee", "https://vendicated.dev/", "https://github.com/Vendicated.png"],
+  ["ruby", "https://github.com/1rubyrain", "https://github.com/1rubyrain.png"],
+];
+
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+---
+
+<div
+  class="box"
+  style="margin-bottom: 10px; display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 10px"
+>
+  {
+    shuffle(friends).map((friend) => (
+      <a href={friend[1]} target="_blank" rel="noopener noreferrer">
+        <img
+          src={friend[2]}
+          alt={friend[0]}
+          title={friend[0]}
+          width="50"
+          height="50"
+          class="friend-avatar"
+        />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+.friends {
+  display: flex;
+  flex-direction: row;
+}
+
+.friend-avatar {
+  border-radius: 8px;
+}
+</style>

@@ -1,0 +1,46 @@
+---
+import FilmCard from "@components/FilmCard.astro";
+---
+
+<!-- TODO: you know... actual data... -->
+<div class="films">
+  <FilmCard
+    name="Through the Olive Trees"
+    year="1994"
+    rating="5.0"
+    poster_url="https://a.ltrbxd.com/resized/film-poster/1/8/2/7/2/18272-through-the-olive-trees-0-1000-0-1500-crop.jpg?v=ce04292aa8"
+  />
+  <FilmCard
+    name="Stalker"
+    year="1979"
+    rating="4.5"
+    poster_url="https://a.ltrbxd.com/resized/film-poster/5/1/0/6/2/51062-stalker-0-1000-0-1500-crop.jpg?v=1852068db9"
+  />
+  <FilmCard
+    name="Faust"
+    year="2011"
+    rating="4.0"
+    poster_url="https://a.ltrbxd.com/resized/film-poster/6/3/9/9/5/63995-faust-0-1000-0-1500-crop.jpg?v=7709bd1d17"
+  />
+  <FilmCard
+    name="I&#039;m Hungry, I&#039;m Cold"
+    year="1984"
+    rating="4.0"
+    poster_url="https://a.ltrbxd.com/resized/film-poster/1/1/3/9/0/9/9/1139099-i-m-hungry-i-m-cold-0-1000-0-1500-crop.jpg?v=87a9e2ea20"
+  />
+  <FilmCard
+    name="Paris, Texas"
+    year="1984"
+    rating="5.0"
+    poster_url="https://a.ltrbxd.com/resized/film-poster/5/1/4/6/9/51469-paris-texas-0-1000-0-1500-crop.jpg?v=c8f2743612"
+  />
+</div>
+
+<style>
+.films {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1.125rem;
+}
+</style>
