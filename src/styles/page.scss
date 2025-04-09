@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/nunito.woff2") format("woff2"), url("/font/nunito.woff2");
+}
+
 :root {
   --site-background-color: #181818;
   --site-secondary-color: #282828;
