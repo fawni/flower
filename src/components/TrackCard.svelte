@@ -1,57 +1,58 @@
 <script>
-export let name;
-export let artist;
-export let url;
-export let cover_url;
+  export let name;
+  export let artist;
+  export let album;
+  export let url;
+  export let cover_url;
 </script>
 
 <span class="track">
   <a href={url}>
-    <img class="cover" src={cover_url} width="150" height="150" />
+    <img
+      class="cover"
+      src={cover_url}
+      width="150"
+      height="150"
+      alt="{album} — Album Cover"
+    />
   </a>
   <a href={url}><p class="track-name">{name}</p></a>
   <p class="track-artist">{artist}</p>
 </span>
 
 <style lang="scss">
-.track {
-  display: flex;
-  flex-direction: column;
-  max-width: 150px;
-  text-align: center;
-  align-items: center;
-}
-
-.track-name {
-  padding-top: 0.5rem;
-  font-weight: 400;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-}
-
-.track-artist {
-  color: var(--site-secondary-text-color);
-  font-weight: 400;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-.cover {
-  border-radius: 8px;
-}
-
-a {
-  color: var(--site-primary-text-color);
-  text-decoration: none;
-  cursor: pointer;
-
-  transition-property: opacity, text-decoration;
-  transition-duration: 0.15s;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-
-  &:hover, &:focus {
-    color: var(--site-primary-text-color);
-    opacity: 0.5;
+  .track {
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+    text-align: center;
+    align-items: center;
   }
-}
+
+  .track-name {
+    padding-top: 0.5rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  .track-artist {
+    color: var(--site-secondary-text-color);
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  .cover {
+    border-radius: 8px;
+  }
+
+  a {
+    color: var(--site-primary-text-color);
+
+    &:hover,
+    &:focus {
+      color: var(--site-primary-text-color);
+    }
+  }
 </style>

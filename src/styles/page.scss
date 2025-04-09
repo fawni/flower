@@ -35,10 +35,21 @@ hr {
 }
 
 a {
-  color: var(--site-accent-color);
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--site-accent-color-hover);
+
+a {
+  color: var(--site-accent-color);
+  text-decoration: none;
+  cursor: pointer;
+
+  transition-property: opacity, text-decoration;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+
+  &:hover, &:focus {
+    color: var(--site-accent-color-hover);
+    opacity: 0.5;
+  }
 }

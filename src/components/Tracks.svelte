@@ -19,6 +19,7 @@
       tracksData = tracks.map((track) => ({
         name: track?.name,
         artist: track?.artist["#text"],
+        album: track?.album["#text"],
         url: track?.url,
         cover_url: track?.image[3]["#text"],
       }));
@@ -37,6 +38,7 @@
     {/if}
   {/each}
 </div>
+<div style="color:var(--site-secondary-text-color); margin-bottom: 1rem;">→ More on my <a href="https://last.fm/user/Aokiare">Last.fm</a></div>
 
 <style>
   .tracks {
