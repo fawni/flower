@@ -45,6 +45,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 1.125rem;
+    margin-bottom: 0.5rem;
   }
 </style>
