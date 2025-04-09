@@ -38,7 +38,7 @@
     {/if}
   {/each}
 </div>
-<div style="color:var(--site-secondary-text-color); margin-bottom: 1rem;">→ More on my <a href="https://last.fm/user/Aokiare">Last.fm</a></div>
+<div style="color:var(--site-secondary-text-color); margin-bottom: 1.25rem;">→ More on my <a href="https://last.fm/user/Aokiare">Last.fm</a></div>
 
 <style>
   .tracks {
