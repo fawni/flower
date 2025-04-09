@@ -34,8 +34,15 @@ const stars = {
 }
 
 .film-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   padding-top: 0.5rem;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;
 }
