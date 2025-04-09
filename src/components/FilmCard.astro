@@ -1,6 +1,6 @@
 ---
 import sanitizeHtml from "sanitize-html";
-const { name, year, rating, poster_url } = Astro.props;
+const { name, year, rating, url, poster_url } = Astro.props;
 
 const stars = {
   "1.0": "★",
@@ -16,10 +16,10 @@ const stars = {
 ---
 
 <span class="film">
-  <a href="">
+  <a href=`${url}`>
     <img class="poster" src=`${poster_url}` width="150" height="225">
   </a>
-  <a><p class="film-name">{sanitizeHtml(name)}</p></a>
+  <a href=`${url}`><p class="film-name">{sanitizeHtml(name)}</p></a>
   <p class="film-year">{year}</p>
   <p class="film-rating">{stars[rating]}</p>
 </span>
