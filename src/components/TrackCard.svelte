@@ -20,7 +20,6 @@ export let loved;
   </a>
   <a href={url}><p class="track-name">{name}</p></a>
   <a href={artist_url}><p class="track-artist">{artist}</p></a>
-  <!-- {#if loved}<span>❤</span>{/if} -->
   {#if loved}<p style="color: var(--site-accent-color)">❤</p>{/if}
 </span>
 

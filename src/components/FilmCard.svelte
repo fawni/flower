@@ -1,6 +1,12 @@
----
+<script>
 import sanitizeHtml from "sanitize-html";
-const { name, year, rating, url, poster_url } = Astro.props;
+
+export let name;
+export let year;
+export let rating;
+export let rewatch;
+export let url;
+export let poster_url;
 
 const stars = {
   "1.0": "★",
@@ -13,15 +19,20 @@ const stars = {
   "4.5": "★★★★½",
   "5.0": "★★★★★",
 };
----
+</script>
 
 <span class="film">
-  <a href=`${url}`>
-    <img class="poster" src=`${poster_url}` width="150" height="225">
+  <a href={url}>
+    <img class="poster" src={poster_url} width="150" height="225" alt={name} />
   </a>
-  <a href=`${url}`><p class="film-name">{sanitizeHtml(name)}</p></a>
+  <a href={url}><p class="film-name">{sanitizeHtml(name)}</p></a>
   <p class="film-year">{year}</p>
-  <p class="film-rating" style="color: var(--site-accent-color)">{stars[rating]}</p>
+  <p class="film-rating">
+    {#if rewatch}
+      🔄
+    {/if}
+    {stars[rating]}
+  </p>
 </span>
 
 <style lang="scss">
@@ -53,6 +64,10 @@ const stars = {
   font-size: 0.8rem;
 }
 
+.film-rating {
+  color: var(--site-accent-color);
+}
+
 .poster {
   border-radius: 8px;
 }
@@ -60,7 +75,8 @@ const stars = {
 a {
   color: var(--site-primary-text-color);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--site-primary-text-color);
   }
 }

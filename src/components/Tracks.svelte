@@ -25,7 +25,7 @@ const fetchTracks = async () => {
       loved: track?.loved === "1" ? true : false,
     }));
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching tracks:", error);
   }
 };
 
