@@ -20,6 +20,7 @@ const fetchTracks = async () => {
       artist: track?.artist.name,
       album: track?.album["#text"],
       url: track?.url,
+      artist_url: track?.artist.url,
       cover_url: track?.image[3]["#text"],
       loved: track?.loved === "1" ? true : false,
     }));

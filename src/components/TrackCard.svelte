@@ -3,6 +3,7 @@ export let name;
 export let artist;
 export let album;
 export let url;
+export let artist_url;
 export let cover_url;
 export let loved;
 </script>
@@ -17,10 +18,10 @@ export let loved;
       alt="{album} — Album Cover"
     />
   </a>
-  <a href={url}><span class="track-name">{name}</span></a>
-  <p class="track-artist">{artist}</p>
+  <a href={url}><p class="track-name">{name}</p></a>
+  <a href={artist_url}><p class="track-artist">{artist}</p></a>
   <!-- {#if loved}<span>❤</span>{/if} -->
-  {#if loved}<span style="color: var(--site-accent-color)">❤</span>{/if}
+  {#if loved}<p style="color: var(--site-accent-color)">❤</p>{/if}
 </span>
 
 <style lang="scss">
