@@ -10,17 +10,18 @@ let tracksData;
 const fetchTracks = async () => {
   try {
     const response = await fetch(
-      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${api_key}&format=json`,
+      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${api_key}&format=json&limit=4&extended=1`,
     );
     const data = await response.json();
     const tracks = data?.recenttracks?.track?.slice(0, 5) || [];
 
     tracksData = tracks.map((track) => ({
       name: track?.name,
-      artist: track?.artist["#text"],
+      artist: track?.artist.name,
       album: track?.album["#text"],
       url: track?.url,
       cover_url: track?.image[3]["#text"],
+      loved: track?.loved === "1" ? true : false,
     }));
   } catch (error) {
     console.error("Error fetching data:", error);
