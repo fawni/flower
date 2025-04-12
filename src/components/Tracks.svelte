@@ -10,7 +10,7 @@ let tracksData;
 const fetchTracks = async () => {
   try {
     const response = await fetch(
-      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${api_key}&format=json&limit=4&extended=1`,
+      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${api_key}&format=json&limit=5&extended=1`,
     );
     const data = await response.json();
     const tracks = data?.recenttracks?.track?.slice(0, 5) || [];
