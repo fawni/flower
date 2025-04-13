@@ -5,7 +5,6 @@ import { onMount } from "svelte";
 const username = "fawwn";
 
 let filmsData;
-let screenWidth = window.innerWidth;
 
 const fetchFilms = async () => {
   try {
@@ -57,22 +56,14 @@ const fetchFilms = async () => {
   }
 };
 
-onMount(async () => {
-  await fetchFilms();
-
-  const handleResize = () => screenWidth = window.innerWidth;
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-});
+onMount(async () => await fetchFilms());
 </script>
 
 <!-- TODO: you know... actual data... -->
 <div class="films">
-  {#each filmsData as data, index}
-    {#if index < Math.max(3, Math.floor((screenWidth - 30) / (150 + 15)))}
-      {#if data}
-        <FilmCard {...data} />
-      {/if}
+  {#each filmsData as data}
+    {#if data}
+      <FilmCard {...data} />
     {/if}
   {/each}
 </div>

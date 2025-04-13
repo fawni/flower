@@ -6,7 +6,6 @@ const username = "aokiare";
 const api_key = import.meta.env.PUBLIC_LASTFM_API_KEY;
 
 let tracksData;
-let screenWidth = window.innerWidth;
 
 const fetchTracks = async () => {
   try {
@@ -30,21 +29,13 @@ const fetchTracks = async () => {
   }
 };
 
-onMount(async () => {
-  await fetchTracks();
-
-  const handleResize = () => screenWidth = window.innerWidth;
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-});
+onMount(async () => await fetchTracks());
 </script>
 
 <div class="tracks">
-  {#each tracksData as data, index}
-    {#if index < Math.max(3, Math.floor((screenWidth - 30) / (150 + 15)))}
-      {#if data}
-        <TrackCard {...data} />
-      {/if}
+  {#each tracksData as data}
+    {#if data}
+      <TrackCard {...data} />
     {/if}
   {/each}
 </div>
