@@ -39,15 +39,23 @@ onMount(async () => await fetchTracks());
     {/if}
   {/each}
 </div>
-<div style="color: var(--site-secondary-text-color); margin-bottom: 1.25rem">
+<div style="color: var(--site-secondary-text-color); margin-bottom: 1.5rem">
   → More on <a href="https://last.fm/user/Aokiare">Last.fm</a>
 </div>
 
-<style>
+<style lang="scss">
 .tracks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 850px) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 500px;
+  }
 }
 </style>

@@ -67,15 +67,23 @@ onMount(async () => await fetchFilms());
     {/if}
   {/each}
 </div>
-<div style="color: var(--site-secondary-text-color); margin-bottom: 1.25rem">
+<div style="color: var(--site-secondary-text-color); margin-bottom: 1.5rem">
   → More on <a href="https://letterboxd.com/fawwn">Letterboxd</a>
 </div>
 
-<style>
+<style lang="scss">
 .films {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 850px) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 500px;
+  }
 }
 </style>
