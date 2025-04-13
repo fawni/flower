@@ -23,9 +23,18 @@ const stars = {
 
 <span class="film">
   <a href={url}>
-    <img class="poster" src={poster_url} width="150" height="225" alt={name} />
+    <img
+      class="poster"
+      src={poster_url}
+      width="150"
+      height="225"
+      alt="{sanitizeHtml(name)} — Movie Poster"
+      title="{sanitizeHtml(name)} — Movie Poster"
+    >
   </a>
-  <a href={url}><p class="film-name">{sanitizeHtml(name)}</p></a>
+  <a href={url}><p class="film-name" title={sanitizeHtml(name)}>
+      {sanitizeHtml(name)}
+    </p></a>
   <p class="film-year">{year}</p>
   <p class="film-rating">
     {#if rewatch}

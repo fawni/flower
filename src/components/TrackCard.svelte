@@ -16,10 +16,11 @@ export let loved;
       width="150"
       height="150"
       alt="{album} — Album Cover"
+      title="{album} — Album Cover"
     />
   </a>
-  <a href={url}><p class="track-name">{name}</p></a>
-  <a href={artist_url}><p class="track-artist">{artist}</p></a>
+  <a href={url} title={name}><p class="track-name">{name}</p></a>
+  <a href={artist_url} title={artist}><p class="track-artist">{artist}</p></a>
   {#if loved}<p style="color: var(--site-accent-color)">❤</p>{/if}
 </span>
 
