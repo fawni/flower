@@ -29,9 +29,9 @@ import Layout from "@layouts/Layout.astro";
     </div>
     <hr>
     <h2>Recent Films</h2>
-    <Films client:load />
+    <Films client:load client:only />
     <h2>Recent Tracks</h2>
-    <Tracks client:load />
+    <Tracks client:load client:only />
     <h2>Friends</h2>
     <Friends />
 
