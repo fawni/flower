@@ -51,6 +51,13 @@ export let loved;
 }
 
 .track-artist {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   color: var(--site-secondary-text-color);
   font-weight: 400;
   font-size: 0.8rem;
