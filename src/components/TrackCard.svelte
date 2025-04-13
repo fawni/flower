@@ -33,6 +33,7 @@ export let loved;
   max-width: 150px;
   text-align: center;
   align-items: center;
+  line-height: 1.25rem;
 }
 
 .track-name {

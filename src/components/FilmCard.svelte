@@ -51,6 +51,7 @@ const stars = {
   max-width: 150px;
   text-align: center;
   align-items: center;
+  line-height: 1.25rem;
 }
 
 .film-name {
