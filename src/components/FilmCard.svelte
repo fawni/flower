@@ -75,6 +75,8 @@ const stars = {
 
 .film-rating {
   color: var(--site-accent-color);
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .poster {

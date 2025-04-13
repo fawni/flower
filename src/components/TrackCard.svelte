@@ -21,7 +21,9 @@ export let loved;
   </a>
   <a href={url} title={name}><p class="track-name">{name}</p></a>
   <a href={artist_url} title={artist}><p class="track-artist">{artist}</p></a>
-  {#if loved}<p style="color: var(--site-accent-color)">❤</p>{/if}
+  {#if loved}<p style="color: var(--site-accent-color); font-weight: 500; font-size: 0.9rem">
+      ❤
+    </p>{/if}
 </span>
 
 <style lang="scss">
