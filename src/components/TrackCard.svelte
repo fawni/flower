@@ -57,6 +57,7 @@ export let loved;
   line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: break-all;
 
   color: var(--site-secondary-text-color);
   font-weight: 400;
