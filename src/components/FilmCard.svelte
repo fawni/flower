@@ -28,8 +28,8 @@ const stars = {
       src={poster_url}
       width="150"
       height="225"
-      alt="{sanitizeHtml(name)} — Movie Poster"
-      title="{sanitizeHtml(name)} — Movie Poster"
+      alt="{sanitizeHtml(name)} ({year}) — Movie Poster"
+      title="{sanitizeHtml(name)} ({year}) — Movie Poster"
     >
   </a>
   <a href={url}><p class="film-name" title={sanitizeHtml(name)}>
