@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "Nunito";
-  src: url("/fonts/nunito.woff2") format("woff2"), url("/font/nunito.woff2");
+	font-family: "Nunito";
+	src: url(/fonts/Nunito.ttf);
+	font-weight: 100 900;
+	font-style: normal;
 }
 
 :root {
