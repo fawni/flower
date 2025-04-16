@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 import Films from "@components/Films.svelte";
 import Footer from "@components/Footer.astro";
 import Friends from "@components/Friends.astro";
@@ -14,13 +12,13 @@ import underline from "@assets/underline.svg";
 <Layout>
   <div class="layout">
     <div class="header">
-      <Image src={hana} alt="hana" class="hana" height="300" />
+      <img src={hana.src} alt="hana" class="hana" height="300" />
       <div style="padding: 0 2rem">
         <p class="intro">
           hello, i'm <span style="color: var(--site-accent-color)">fawn</span>!
         </p>
-        <Image
-          src={underline}
+        <img
+          src={underline.src}
           alt="underline"
           width="250"
           class="underline"

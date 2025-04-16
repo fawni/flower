@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 const friends = [
   ["rosie", "https://github.com/zaysei", "https://github.com/zaysei.png"],
   ["rushii", "https://rushii.dev/", "https://github.com/rushiiMachine.png"],
@@ -22,7 +20,7 @@ function shuffle(array) {
   {
     shuffle(friends).map((friend) => (
       <a href={friend[1]} target="_blank" rel="noopener noreferrer">
-        <Image
+        <img
           src={friend[2]}
           alt={friend[0]}
           title={friend[0]}
