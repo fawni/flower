@@ -1,11 +1,13 @@
 <script>
 import { onMount } from "svelte";
+
+import Loading from "@components/Loading.svelte";
 import TrackCard from "./TrackCard.svelte";
 
 const username = "aokiare";
 const api_key = import.meta.env.PUBLIC_LASTFM_API_KEY;
 
-let tracksData = [];
+let tracksData = 0;
 
 const fetchTracks = async () => {
   try {
@@ -41,6 +43,8 @@ onMount(async () => await fetchTracks());
         <TrackCard {...data} />
       {/if}
     {/each}
+  {:else if tracksData === 0}
+    <Loading />
   {:else}
     <blockquote class="error">
       Error! Last.fm likely down. <a

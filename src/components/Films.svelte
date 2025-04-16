@@ -1,10 +1,12 @@
 <script>
-import FilmCard from "@components/FilmCard.svelte";
 import { onMount } from "svelte";
+
+import FilmCard from "@components/FilmCard.svelte";
+import Loading from "@components/Loading.svelte";
 
 const username = "fawwn";
 
-let filmsData = [];
+let filmsData = 0;
 
 const fetchFilms = async () => {
   try {
@@ -69,6 +71,8 @@ onMount(async () => await fetchFilms());
         <FilmCard {...data} />
       {/if}
     {/each}
+  {:else if filmsData === 0}
+    <Loading />
   {:else}
     <blockquote class="error">
       Error! Letterboxd likely down. <a
