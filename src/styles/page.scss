@@ -23,10 +23,14 @@ html {
   margin: 0;
 }
 
-.layout {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2rem;
+h2 {
+  margin: unset;
+  padding-bottom: 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--site-secondary-text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
 }
 
 p {
