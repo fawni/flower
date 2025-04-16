@@ -1,25 +1,30 @@
 ---
+import { Image } from "astro:assets";
+
 import Films from "@components/Films.svelte";
 import Footer from "@components/Footer.astro";
 import Friends from "@components/Friends.astro";
 import Tracks from "@components/Tracks.svelte";
 import Layout from "@layouts/Layout.astro";
+
+import hana from "@assets/hana.jpg";
+import underline from "@assets/underline.svg";
 ---
 
 <Layout>
   <div class="layout">
     <div class="header">
-      <img src="/assets/hana.jpg" alt="hana" class="hana" height="300">
+      <Image src={hana} alt="hana" class="hana" height="300" />
       <div style="padding: 0 2rem">
         <p class="intro">
           hello, i'm <span style="color: var(--site-accent-color)">fawn</span>!
         </p>
-        <img
-          src="/assets/underline.svg"
+        <Image
+          src={underline}
           alt="underline"
           width="250"
           class="underline"
-        >
+        />
         <p>
           self-taught software developer with a passion for movies, and music.
           my favorite flowers are tulips 🌷.

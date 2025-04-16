@@ -30,7 +30,7 @@ const stars = {
       height="225"
       alt="{sanitizeHtml(name)} ({year}) — Movie Poster"
       title="{sanitizeHtml(name)} ({year}) — Movie Poster"
-    >
+    />
   </a>
   <a href={url} target="_blank" rel="noopener noreferrer"><p
       class="film-name"

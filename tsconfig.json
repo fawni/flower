@@ -24,6 +24,9 @@
       ],
       "@data/*": [
         "src/data/*"
+      ],
+      "@assets/*": [
+        "public/assets/*"
       ]
     }
   }
