@@ -59,7 +59,7 @@ a {
   transition-duration: 0.15s;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 
-  &:hover, &:focus {
+  &:hover {
     color: var(--site-accent-color-hover);
     opacity: 0.5;
   }

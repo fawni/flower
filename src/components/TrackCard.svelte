@@ -82,8 +82,7 @@ export let loved;
 a {
   color: var(--site-primary-text-color);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--site-primary-text-color);
   }
 }

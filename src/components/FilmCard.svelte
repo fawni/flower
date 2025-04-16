@@ -90,8 +90,7 @@ const stars = {
 a {
   color: var(--site-primary-text-color);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--site-primary-text-color);
   }
 }
