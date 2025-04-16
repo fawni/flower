@@ -22,7 +22,7 @@ const stars = {
 </script>
 
 <span class="film">
-  <a href={url}>
+  <a href={url} target="_blank" rel="noopener noreferrer">
     <img
       class="poster"
       src={poster_url}
@@ -32,7 +32,10 @@ const stars = {
       title="{sanitizeHtml(name)} ({year}) — Movie Poster"
     >
   </a>
-  <a href={url}><p class="film-name" title={sanitizeHtml(name)}>
+  <a href={url} target="_blank" rel="noopener noreferrer"><p
+      class="film-name"
+      title={sanitizeHtml(name)}
+    >
       {sanitizeHtml(name)}
     </p></a>
   <p class="film-year">{year}</p>

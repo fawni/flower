@@ -9,7 +9,7 @@ export let loved;
 </script>
 
 <span class="track">
-  <a href={url}>
+  <a href={url} target="_blank" rel="noopener noreferrer">
     <img
       class="cover"
       src={cover_url}
@@ -19,8 +19,18 @@ export let loved;
       title="{album} — Album Cover"
     />
   </a>
-  <a href={url} title={name}><p class="track-name">{name}</p></a>
-  <a href={artist_url} title={artist}><p class="track-artist">{artist}</p></a>
+  <a
+    href={url}
+    title={name}
+    target="_blank"
+    rel="noopener noreferrer"
+  ><p class="track-name">{name}</p></a>
+  <a
+    href={artist_url}
+    title={artist}
+    target="_blank"
+    rel="noopener noreferrer"
+  ><p class="track-artist">{artist}</p></a>
   {#if loved}<p style="color: var(--site-accent-color); font-weight: 500; font-size: 0.9rem">
       ❤
     </p>{/if}

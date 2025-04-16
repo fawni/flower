@@ -9,6 +9,7 @@
 
   --site-accent-color: #97d0e8;
   --site-accent-color-hover: #72a9c1;
+  --site-red-color: #ee9598;
 
   --site-primary-text-color: #d8d8d8;
   --site-secondary-text-color: #808080;
@@ -56,4 +57,19 @@ a {
     color: var(--site-accent-color-hover);
     opacity: 0.5;
   }
+}
+
+blockquote.error {
+  color: #a0a0a0;
+  font-weight: bold;
+  // font-style: italic;
+  border-left: 5px solid var(--site-red-color);
+  background-color: #202020;
+
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-right: 0.8em;
 }

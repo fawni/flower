@@ -5,7 +5,7 @@ import TrackCard from "./TrackCard.svelte";
 const username = "aokiare";
 const api_key = import.meta.env.PUBLIC_LASTFM_API_KEY;
 
-let tracksData;
+let tracksData = [];
 
 const fetchTracks = async () => {
   try {
@@ -26,6 +26,8 @@ const fetchTracks = async () => {
     }));
   } catch (error) {
     console.error("Error fetching tracks:", error);
+    tracksData = null;
+    return;
   }
 };
 
@@ -33,14 +35,28 @@ onMount(async () => await fetchTracks());
 </script>
 
 <div class="tracks">
-  {#each tracksData as data}
-    {#if data}
-      <TrackCard {...data} />
-    {/if}
-  {/each}
+  {#if tracksData}
+    {#each tracksData as data}
+      {#if data}
+        <TrackCard {...data} />
+      {/if}
+    {/each}
+  {:else}
+    <blockquote class="error">
+      Error! Last.fm likely down. <a
+        href="https://status.last.fm/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Service status</a>.
+    </blockquote>
+  {/if}
 </div>
 <div style="color: var(--site-secondary-text-color); margin-bottom: 1.5rem">
-  → More on <a href="https://last.fm/user/Aokiare">Last.fm</a>
+  → More on <a
+    href="https://last.fm/user/Aokiare"
+    target="_blank"
+    rel="noopener noreferrer"
+  >Last.fm</a>
 </div>
 
 <style lang="scss">

@@ -4,7 +4,7 @@ import { onMount } from "svelte";
 
 const username = "fawwn";
 
-let filmsData;
+let filmsData = [];
 
 const fetchFilms = async () => {
   try {
@@ -53,6 +53,8 @@ const fetchFilms = async () => {
     filmsData = films;
   } catch (error) {
     console.error("Error fetching films:", error);
+    filmsData = null;
+    return;
   }
 };
 
@@ -61,14 +63,28 @@ onMount(async () => await fetchFilms());
 
 <!-- TODO: you know... actual data... -->
 <div class="films">
-  {#each filmsData as data}
-    {#if data}
-      <FilmCard {...data} />
-    {/if}
-  {/each}
+  {#if filmsData}
+    {#each filmsData as data}
+      {#if data}
+        <FilmCard {...data} />
+      {/if}
+    {/each}
+  {:else}
+    <blockquote class="error">
+      Error! Letterboxd likely down. <a
+        href="https://bsky.app/profile/letterboxd.social"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Service status</a>.
+    </blockquote>
+  {/if}
 </div>
 <div style="color: var(--site-secondary-text-color); margin-bottom: 1.5rem">
-  → More on <a href="https://letterboxd.com/fawwn">Letterboxd</a>
+  → More on <a
+    href="https://letterboxd.com/fawwn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >Letterboxd</a>
 </div>
 
 <style lang="scss">
