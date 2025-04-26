@@ -39,7 +39,7 @@ const stars = {
       {sanitizeHtml(name)}
     </p></a>
   <p class="film-year">{year}</p>
-  <p class="film-rating">
+  <p class="film-rating" title={rating}>
     {#if rewatch}
       🔄
     {/if}

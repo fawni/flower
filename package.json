@@ -9,16 +9,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/svelte": "^7.0.9",
-    "astro": "^5.6.1",
+    "@astrojs/svelte": "^7.0.11",
+    "astro": "^5.7.5",
     "astro-seo": "^0.8.4",
     "normalize.css": "^8.0.1",
-    "sanitize-html": "^2.15.0",
-    "svelte": "^5.25.9",
+    "sanitize-html": "^2.16.0",
+    "svelte": "^5.28.2",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
     "@types/sanitize-html": "^2.15.0",
-    "sass-embedded": "^1.86.3"
+    "sass-embedded": "^1.87.0"
   }
 }
