@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "DM Sans";
+  src: url(/fonts/DMSans.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 :root {
   --site-background-color: #181818;
   --site-secondary-color: #282828;
@@ -21,7 +28,7 @@ html {
   // background-image: url("/assets/blackfloral.png");
   background-color: var(--site-background-color);
   color: var(--site-primary-text-color);
-  font-family: "Nunito", sans-serif;
+  font-family: "DM Sans", "Nunito", sans-serif;
   margin: 0;
 }
 
