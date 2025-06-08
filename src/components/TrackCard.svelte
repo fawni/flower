@@ -15,8 +15,8 @@ export let loved;
       src={cover_url}
       width="150"
       height="150"
-      alt="{album} — Album Cover"
-      title="{album} — Album Cover"
+      alt="{album ? `${album} — Album Cover` : "NO ALBUM"}"
+      title="{album ? `${album} — Album Cover` : "NO ALBUM"}"
     />
   </a>
   <a
