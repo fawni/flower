@@ -23,7 +23,8 @@ const fetchTracks = async () => {
       album: track?.album["#text"],
       url: track?.url,
       artist_url: track?.artist.url,
-      cover_url: track?.image[3]["#text"].replace(/\/\d{1,3}x\d{1,3}\//, "/") || "/hi.jpg",
+      cover_url: track?.image[3]["#text"].replace(/\/\d{1,3}x\d{1,3}\//, "/")
+        || "/hi.jpg",
       loved: track?.loved === "1" ? true : false,
     }));
   } catch (error) {
