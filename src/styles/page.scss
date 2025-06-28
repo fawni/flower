@@ -17,7 +17,6 @@
   --site-secondary-color: #282828;
 
   --site-accent-color: #97d0e8;
-  --site-accent-color-hover: #72a9c1;
   --site-red-color: #ee9598;
 
   --site-primary-text-color: #d8d8d8;
@@ -67,7 +66,6 @@ a {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 
   &:hover {
-    color: var(--site-accent-color-hover);
     opacity: 0.5;
   }
 }
