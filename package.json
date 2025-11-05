@@ -13,12 +13,10 @@
     "astro": "^5.12.9",
     "astro-seo": "^0.8.4",
     "normalize.css": "^8.0.1",
-    "sanitize-html": "^2.16.0",
     "svelte": "^5.28.2",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@types/sanitize-html": "^2.15.0",
     "sass-embedded": "^1.87.0"
   }
 }

@@ -1,6 +1,4 @@
 <script>
-import sanitizeHtml from "sanitize-html";
-
 export let name;
 export let year;
 export let rating;
@@ -28,15 +26,15 @@ const stars = {
       src={poster_url}
       width="150"
       height="225"
-      alt="{sanitizeHtml(name)} ({year}) — Movie Poster"
-      title="{sanitizeHtml(name)} ({year}) — Movie Poster"
+      alt="{name} ({year}) — Movie Poster"
+      title="{name} ({year}) — Movie Poster"
     />
   </a>
   <a href={url} target="_blank" rel="noopener noreferrer"><p
       class="film-name"
-      title={sanitizeHtml(name)}
+      title={name}
     >
-      {sanitizeHtml(name)}
+      {name}
     </p></a>
   <p class="film-year">{year}</p>
   <p class="film-rating" title={rating}>
