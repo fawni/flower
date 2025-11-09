@@ -7,6 +7,7 @@ export let url;
 export let poster_url;
 
 const stars = {
+  "0.5": "½",
   "1.0": "★",
   "1.5": "★½",
   "2.0": "★★",
