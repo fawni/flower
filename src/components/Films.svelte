@@ -38,9 +38,8 @@ const fetchFilms = async () => {
       const url = getTextContent("link");
 
       const description = getTextContent("description");
-      const posterUrl = description
-        ? description.match(/<img src="([^"]+)"/)?.[1]
-        : "";
+      const posterUrl = description.match(/<img src="([^"]+)"/)?.[1]
+        ?? "https://s.ltrbxd.com/static/img/empty-poster-1000-D9cprv0m.png";
 
       films.push({
         name: name,
