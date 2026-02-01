@@ -16,7 +16,7 @@ export let loved;
       width="150"
       height="150"
       alt="{album ? `${album} — Album Cover` : "NO ALBUM"}"
-      title="{album ? `${album} — Album Cover` : "NO ALBUM"}"
+      title="{album ? `${album}` : "NO ALBUM"}"
     />
   </a>
   <a

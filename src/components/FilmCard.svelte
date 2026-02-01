@@ -28,7 +28,7 @@ const stars = {
       width="150"
       height="225"
       alt="{name} ({year}) — Movie Poster"
-      title="{name} ({year}) — Movie Poster"
+      title="{name} ({year})"
     />
   </a>
   <a href={url} target="_blank" rel="noopener noreferrer"><p
