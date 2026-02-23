@@ -12,17 +12,12 @@ import Underline from "@assets/underline.svg";
 <Layout>
   <div class="layout">
     <div class="header">
-      <a
-        href="https://x.com/tami_moon02/status/1269967562445488130"
-        target="_blank"
-        rel="noopener noreferrer"
-      ><img
-          src={avatar.src}
-          alt="avatar"
-          title="avatar — Source"
-          id="avatar"
-          height="300"
-        /></a>
+      <img
+        src={avatar.src}
+        alt="avatar"
+        id="avatar"
+        height="300"
+      />
       <div style="padding: 0 2rem">
         <p id="intro">
           hello, i'm <span
@@ -87,35 +82,35 @@ import Underline from "@assets/underline.svg";
 }
 </style>
 
-<script>
-const PINK = "#ee95d2";
-const CYAN = "#97d0e8";
+<!-- <script> -->
+<!-- const PINK = "#ee95d2"; -->
+<!-- const CYAN = "#97d0e8"; -->
 
-const name = document.getElementById("name");
-const underline = document.getElementById("underline");
+<!-- const name = document.getElementById("name"); -->
+<!-- const underline = document.getElementById("underline"); -->
 
-let count = 0;
+<!-- let count = 0; -->
 
-const cat = (h: string) => {
-  return Array.from(h).reduce((a, c) => a + c.charCodeAt(0), 0);
-};
+<!-- const cat = (h: string) => { -->
+<!--   return Array.from(h).reduce((a, c) => a + c.charCodeAt(0), 0); -->
+<!-- }; -->
 
-const euphoria = Math.floor(cat("faye") / (cat("e") / 2));
+<!-- const euphoria = Math.floor(cat("faye") / (cat("e") / 2)); -->
 
-name?.addEventListener("click", () => {
-  count++;
-  count === euphoria ? trans() : detrans();
-});
+<!-- name?.addEventListener("click", () => { -->
+<!--   count++; -->
+<!--   count === euphoria ? trans() : detrans(); -->
+<!-- }); -->
 
-const trans = () => {
-  document.documentElement.style.setProperty("--site-accent-color", PINK);
-  name.textContent = "faye";
-  name?.setAttribute("title", "she/her");
-};
+<!-- const trans = () => { -->
+<!--   document.documentElement.style.setProperty("--site-accent-color", PINK); -->
+<!--   name.textContent = "faye"; -->
+<!--   name?.setAttribute("title", "she/her"); -->
+<!-- }; -->
 
-const detrans = () => {
-  document.documentElement.style.setProperty("--site-accent-color", CYAN);
-  name.textContent = "fawn";
-  name?.setAttribute("title", "he/him");
-};
-</script>
+<!-- const detrans = () => { -->
+<!--   document.documentElement.style.setProperty("--site-accent-color", CYAN); -->
+<!--   name.textContent = "fawn"; -->
+<!--   name?.setAttribute("title", "he/him"); -->
+<!-- }; -->
+<!-- </script> -->
