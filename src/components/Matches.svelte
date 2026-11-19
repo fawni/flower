@@ -62,7 +62,8 @@ const fetchItems = async (matches) => {
 
     const items = itemIds
       ? [0, 1, 2, 3, 4, 5].map((slot) => {
-        const name = itemIds[player[`item_${slot}`]];
+        const id = player[`item_${slot}`];
+        const name = id ? itemIds[id] : null;
         return name
           ? {
             name: name.replaceAll("_", " "),

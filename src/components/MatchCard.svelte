@@ -38,9 +38,9 @@ let imageFailed = false;
     <span class="hero-name">{hero}</span>
     <span class="time-ago" title="Played">{time_ago}</span>
   </span>
-  {#if items}
+  {#if items?.some(Boolean)}
     <span class="items">
-      {#each items as item}
+      {#each items as item, i}
         {#if item}
           <img
             class="item"
@@ -50,9 +50,8 @@ let imageFailed = false;
             alt={item.name}
             title={item.name}
             loading="lazy"
+            on:error={() => (items[i] = null)}
           />
-        {:else}
-          <span class="item empty"></span>
         {/if}
       {/each}
     </span>
@@ -128,10 +127,6 @@ let imageFailed = false;
   height: 24px;
   border-radius: 3px;
   object-fit: cover;
-
-  &.empty {
-    background-color: var(--site-secondary-color);
-  }
 }
 
 .duration,
@@ -146,7 +141,7 @@ let imageFailed = false;
 
 .duration {
   min-width: 2.5rem;
-  text-align: right;
+  text-align: left;
 }
 
 .kda {
